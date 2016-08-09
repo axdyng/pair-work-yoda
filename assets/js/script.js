@@ -1,21 +1,27 @@
 $(function() {
   /* ---- Cheng Xin ---- */
-  var $txtArea = $('#textArea'),
-    $result = $('#result'),
-    $translate = $('#translate');
+  var $txtArea    = $('#textArea'),
+      $result     = $('#result'),
+      $translate  = $('#translate');
 
   // $result.bind('ajaxStart', function() {
   //   $(this).css("background-image", "url('../img/ajax-loading-big.gif')");
   // }).bind('ajaxStop', function() {
   //   $(this).css("background-image", "none");
   // });
-  $( document ).ajaxStart(function() {
-    $('.output-area').css({"background-image":"url('assets/img/loader.gif')","background-size":"cover"});
-  });
+
+  // $( document ).ajaxStart(function() {
+  //   $('.output-area').css({"background-image": "url('assets/img/loader.gif')","background-size":"cover"});
+  // });
   $( document ).ajaxStop(function() {
-    $('.output-area').css("background-image", "none");
+    $('.output-area').LoadingOverlay("hide");
   });
+
   $translate.on('click', function() {
+    /* ----  Customising loader ---- */
+    $result.LoadingOverlay("show", {
+      color:  "transparent"
+    });
 
     $.ajax({
         url: 'https://yoda.p.mashape.com/yoda', //the URL to the API
@@ -50,6 +56,11 @@ $(function() {
     $getURL;
 
   $btn.on('click', function() {
+    /* ----  Customising loader ---- */
+    $textOutput.LoadingOverlay("show", {
+      color:  "transparent"
+    });
+
     //console.log($textInput.val());
     $postText = $textInput.val().replace(/ /g, "+");
     $getURL = $url.concat($postText);
