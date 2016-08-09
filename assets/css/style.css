@@ -1,0 +1,74 @@
+/* $main-yoda-color: #73E05F; */
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 1em;
+}
+
+body {
+  background-image: url("../img/yoda-bg.jpg");
+  background-size: cover;
+  color: #73E05F;
+}
+
+body:after {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 2px solid #73E05F;
+}
+
+::-webkit-input-placeholder {
+   color: #73E05F;
+}
+
+.yoda-img {
+  width: 50%;
+  height: 280px;
+  border-radius: 150px;
+}
+
+.yoda-right {
+    -moz-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.interact-area {
+  display: block;
+  margin: 15px auto;
+  background-color: black;
+  border-color: black;
+  text-align: center;
+}
+
+.input-area {
+  width: 40%;
+  height: 50px;
+}
+
+.btn-primary {
+  width: 25%;
+  background-color: #4B472C;
+  border-color: #4B472C;
+  border-radius: 20px;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: #73E05F;
+  color: black;
+}
+
+.output-area {
+  width: 40%;
+  height: 88px;
+  text-align: center;
+}
