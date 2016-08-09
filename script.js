@@ -12,15 +12,14 @@ $(function() {
         },
         datatype: 'json',
         beforeSend: function (xhr) {
-            xhr.setRequestHeader("X-Mashape-Authorization", "rO3ezlTQsgmshjtHvhopN5TUcVzzp1m2emIjsndzl29xZKM92x"); // Enter your mashape key
+            xhr.setRequestHeader("X-Mashape-Key", "rO3ezlTQsgmshjtHvhopN5TUcVzzp1m2emIjsndzl29xZKM92x"); // Enter your mashape key
         }
       }).done(function(data) {
         $result.text(data);
       })
       .fail(function(request, textStatus, errorThrown) {
-        $txtArea.text('An error occurred during your request: ' + request.status + ' ' + textStatus + ' ' + errorThrown);
+        $result.text('An error occurred during your request: ' + request.status + ' ' + textStatus + ' ' + errorThrown);
       });
   });
-
 
 });
