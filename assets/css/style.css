@@ -1,8 +1,8 @@
 /* $main-yoda-color: #73E05F; */
-
+@import url(https://fonts.googleapis.com/css?family=Lobster|Roboto);
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  /*font-family: sans-serif;*/
 }
 
 html {
@@ -13,6 +13,7 @@ body {
   background-image: url("../img/yoda-bg.jpg");
   background-size: cover;
   color: #73E05F;
+  font-family: 'Roboto', sans-serif;
 }
 
 body:after {
@@ -23,6 +24,15 @@ body:after {
     bottom: 0;
     left: 50%;
     border-left: 2px solid #73E05F;
+}
+
+h1, h2{
+  font-family: 'Lobster', cursive;
+}
+
+h1 {
+  font-size: 3em;
+  padding-left: 8px;
 }
 
 ::-webkit-input-placeholder {
@@ -57,8 +67,7 @@ body:after {
 
 .btn-primary {
   width: 25%;
-  background-color: #4B472C;
-  border-color: #4B472C;
+  color: #73E05F; 
   border-radius: 20px;
 }
 

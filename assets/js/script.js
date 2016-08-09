@@ -20,7 +20,7 @@ $(function() {
   $translate.on('click', function() {
     /* ----  Customising loader ---- */
     $result.LoadingOverlay("show", {
-      color:  "transparent"
+      color:  "rgba(51, 51, 51, 0.6)"
     });
 
     $.ajax({
@@ -58,7 +58,7 @@ $(function() {
   $btn.on('click', function() {
     /* ----  Customising loader ---- */
     $textOutput.LoadingOverlay("show", {
-      color:  "transparent"
+      color:  "rgba(51, 51, 51, 0.6)"
     });
 
     //console.log($textInput.val());
